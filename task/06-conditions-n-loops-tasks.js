@@ -30,7 +30,10 @@
  *
  */
 function getFizzBuzz(num) {
-    throw new Error('Not implemented');
+    if (num % 3 === 0 && num % 5 === 0) return 'FizzBuzz';
+    if (num % 3 === 0) return 'Fizz';
+    if (num % 5 === 0) return 'Buzz';
+    return num;
 }
 
 
@@ -46,7 +49,8 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
+    if (n === 0) return 1;
+    return n * getFactorial(n - 1);
 }
 
 
@@ -63,7 +67,11 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+    let acc = 0;
+    for (let i = n1; i <= n2; i++) {
+      acc += i;
+    }
+    return acc;
 }
 
 
@@ -82,7 +90,7 @@ function getSumBetweenNumbers(n1, n2) {
  *   10,10,10 =>  true
  */
 function isTriangle(a,b,c) {
-    throw new Error('Not implemented');
+    return (a < b + c && b < a + c && c < a + b) ? true : false;
 }
 
 
@@ -150,7 +158,7 @@ function doRectanglesOverlap(rect1, rect2) {
  *   
  */
 function isInsideCircle(circle, point) {
-    throw new Error('Not implemented');
+    return Math.sqrt((point.x - circle.center.x) ** 2 + (point.y - circle.center.y) ** 2) < circle.radius;
 }
 
 
@@ -209,7 +217,7 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
  * 'noon' => 'noon'
  */
 function reverseString(str) {
-    throw new Error('Not implemented');
+    return str.split('').reverse().join('');
 }
 
 
@@ -226,7 +234,7 @@ function reverseString(str) {
  *   34143 => 34143
  */
 function reverseInteger(num) {
-    throw new Error('Not implemented');
+    return parseInt(num.toString(10).split('').reverse().join(''));
 }
 
 
@@ -356,7 +364,7 @@ function timespanToHumanString(startDate, endDate) {
  *    365, 10 => '365'
  */
 function toNaryString(num, n) {
-    throw new Error('Not implemented');
+    return num.toString(n);
 }
 
 
