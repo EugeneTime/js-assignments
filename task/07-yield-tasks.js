@@ -47,8 +47,7 @@ function* get99BottlesOfBeer() {
  *
  */
 function* getFibonacciSequence() {
-    if (n === 0) return 1;
-    return n * fact(n - 1);
+    throw new Error('Not implemented');
 }
 
 
